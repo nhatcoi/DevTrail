@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Code, CheckSquare, Zap } from 'lucide-react';
-import { useLanguage } from '@/i18n';
+import { useLanguage } from '../../i18n';
 
 
 

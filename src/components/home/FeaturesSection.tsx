@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { File, Edit, Layout, FileCheck, Save, Users } from 'lucide-react';
-import { useLanguage } from '@/i18n';
+import { useLanguage } from '../../i18n';
 
 const featureIcons = [
   <File key="file" className="h-8 w-8 text-blue-600" />,
