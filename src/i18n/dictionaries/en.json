@@ -120,33 +120,35 @@
         "title": "Optimized for Tech",
         "subtitle": "Made for IT professionals",
         "points": [
-          "Support for projects, tech stack, GitHub - unlimited",
-          "Layout suitable for tech industry",
-          "Language & format matching IT industry needs"
+          "🎨 Support for projects, tech stack, GitHub - unlimited",
+          "💻 Layout suitable for tech industry",
+          "📚 Language & format matching IT industry needs"
         ]
       },
       "hiring": {
         "title": "Tech Recruitment Standard",
         "subtitle": "Impress IT recruiters at first glance",
         "points": [
-          "ATS optimized, easy to scan content",
-          "Clear display of skills & experience",
-          "Logical, easy to read, easy to follow interface"
+          "📝 ATS optimized, easy to scan content",
+          "💼 Clear display of skills & experience",
+          "📊 Logical, easy to read interface"
         ]
       },
       "performance": {
         "title": "User-friendly & High Performance",
         "subtitle": "Smooth on all devices",
         "points": [
-          "Intuitive drag & drop, no coding needed",
-          "Built with Next.js, Tailwind - fast, responsive",
-          "Data security, GitHub login support"
+          "🎯 Intuitive drag & drop, no coding needed",
+          "⚡ Built with Next.js, Tailwind - fast, responsive",
+          "🔒 Data security, GitHub login support"
         ]
       }
     },
     "pricing": {
       "title": "Choose Your Plan",
       "subtitle": "Flexible options for individuals and teams of all sizes",
+      "mostPopular": "Most Popular",
+      "perMonth": "/month",
       "free": {
         "name": "Free",
         "price": "0",
@@ -157,11 +159,12 @@
           "Basic analytics",
           "3 Projects",
           "Mobile app access"
-        ]
+        ],
+        "cta": "Get Started"
       },
       "pro": {
         "name": "Professional",
-        "price": "9.99",
+        "price": "$3.99",
         "description": "For high productivity",
         "features": [
           "Everything in Free",
@@ -170,11 +173,12 @@
           "Goal setting and tracking",
           "Priority support",
           "Team collaboration (up to 3)"
-        ]
+        ],
+        "cta": "Start 14-day trial"
       },
       "team": {
         "name": "Enterprise",
-        "price": "29.99",
+        "price": "Contact by sales",
         "description": "For teams and organizations",
         "features": [
           "Everything in Professional",
@@ -184,7 +188,8 @@
           "API access",
           "Dedicated support",
           "Custom integrations"
-        ]
+        ],
+        "cta": "Contact Sales"
       }
     },
     "cta": {

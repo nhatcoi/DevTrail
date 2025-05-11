@@ -120,23 +120,28 @@ type Dictionary = {
     pricing: {
       title: string;
       subtitle: string;
+      mostPopular: string;
+      perMonth: string;
       free: {
         name: string;
         price: string;
         description: string;
         features: string[];
+        cta: string;
       };
       pro: {
         name: string;
         price: string;
         description: string;
         features: string[];
+        cta: string;
       };
       team: {
         name: string;
         price: string;
         description: string;
         features: string[];
+        cta: string;
       };
     };
     cta: {

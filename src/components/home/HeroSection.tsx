@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../i18n';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function HeroSection() {
   const { dictionary } = useLanguage();
@@ -16,7 +16,7 @@ export default function HeroSection() {
             className="max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">DevTrail</span> 🚀
@@ -51,7 +51,7 @@ export default function HeroSection() {
             className="relative w-full md:w-2/5 h-[400px]"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 1, delay: 0.2 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg opacity-20 blur-xl" />
             <div className="relative h-full rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-xl">

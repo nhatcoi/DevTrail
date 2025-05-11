@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FileUp, Palette, Link as LinkIcon, BarChart } from 'lucide-react';
-import { useLanguage } from '../../i18n';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 
 
@@ -44,7 +44,7 @@ export default function AdvancedFeaturesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{dictionary.home.features.title}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -60,7 +60,7 @@ export default function AdvancedFeaturesSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
             >
               {/* Content */}
               <div className="lg:w-1/2">
@@ -77,7 +77,7 @@ export default function AdvancedFeaturesSection() {
               <div className="lg:w-1/2 h-[300px] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
                 {/* Placeholder for feature image */}
                 <div className="text-gray-400 text-center p-8">
-                  <p>Hình ảnh minh họa cho tính năng &quot;{feature.title}&quot;</p>
+                  <p>Illustration for "{feature.title}"</p>
                 </div>
               </div>
             </motion.div>

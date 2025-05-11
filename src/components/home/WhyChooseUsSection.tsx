@@ -2,45 +2,32 @@
 
 import { motion } from 'framer-motion';
 import { Code, CheckSquare, Zap } from 'lucide-react';
-import { useLanguage } from '../../i18n';
-
-
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function WhyChooseUsSection() {
   const { dictionary } = useLanguage();
+  const { why } = dictionary.home;
+
   const reasons = [
     {
-      title: dictionary.home.why.tech.title,
-      subtitle: 'Dành cho dân IT',
-      description: [
-        '🎨 Hỗ trợ dự án, tech stack, GitHub – không giới hạn',
-        '💻 Bố cục phù hợp với ngành công nghệ',
-        '📚 Ngôn ngữ & định dạng sát với nhu cầu thực tế ngành IT'
-      ],
+      title: why.tech.title,
+      subtitle: why.tech.subtitle,
+      description: why.tech.points,
       icon: <Code className="h-12 w-12 text-blue-600" />
     },
     {
-      title: 'Chuẩn tuyển dụng công nghệ',
-      subtitle: 'Gây ấn tượng với nhà tuyển dụng IT từ cái nhìn đầu tiên',
-      description: [
-        '📝 Tối ưu ATS, dễ dàng quét nội dung',
-        '💼 Hiển thị rõ ràng kỹ năng & kinh nghiệm',
-        '📊 Giao diện logic, dễ đọc, dễ theo dõi'
-      ],
+      title: why.hiring.title,
+      subtitle: why.hiring.subtitle,
+      description: why.hiring.points,
       icon: <CheckSquare className="h-12 w-12 text-blue-600" />
     },
     {
-      title: 'Thân thiện & hiệu năng cao',
-      subtitle: 'Dễ dùng, mượt mà trên mọi thiết bị',
-      description: [
-        '🎨 Kéo thả trực quan, không cần code',
-        '⚡ Xây dựng bằng Next.js, Tailwind – nhanh, responsive',
-        '🔒 Bảo mật dữ liệu, hỗ trợ đăng nhập GitHub'
-      ],
+      title: why.performance.title,
+      subtitle: why.performance.subtitle,
+      description: why.performance.points,
       icon: <Zap className="h-12 w-12 text-blue-600" />
     }
   ];
-
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -50,11 +37,11 @@ export default function WhyChooseUsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why choose us 🚀</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{why.title}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Thiết kế phù hợp với nhu cầu năng suất hiện đại của bạn
+            {why.subtitle}
           </p>
         </motion.div>
 
@@ -66,7 +53,7 @@ export default function WhyChooseUsSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 1, delay: index * 0.1 }}
             >
               <div className="mb-6">{reason.icon}</div>
               <h3 className="text-2xl font-bold mb-2">{reason.title}</h3>

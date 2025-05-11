@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { File, Edit, Layout, FileCheck, Save, Users } from 'lucide-react';
-import { useLanguage } from '../../i18n';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const featureIcons = [
   <File key="file" className="h-8 w-8 text-blue-600" />,
@@ -30,7 +30,7 @@ export default function FeaturesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{dictionary.home.features.title}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -46,7 +46,7 @@ export default function FeaturesSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 1, delay: index * 0.1 }}
             >
               <div className="mb-4">
                 {featureIcons[index]}

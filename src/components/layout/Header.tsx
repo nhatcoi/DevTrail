@@ -38,7 +38,7 @@ export default function Header() {
                 <LanguageSwitcher />
                 <Link
                     href="/auth/login"
-                    className="ml-4 px-4 py-2 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                    className="ml-4 px-4 py-2 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors min-w-[100px] text-center"
                 >
                   {dictionary.header.login}
                 </Link>
