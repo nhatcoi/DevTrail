@@ -77,7 +77,7 @@ export default function AdvancedFeaturesSection() {
               <div className="lg:w-1/2 h-[300px] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
                 {/* Placeholder for feature image */}
                 <div className="text-gray-400 text-center p-8">
-                  <p>Illustration for "{feature.title}"</p>
+                  <p>Illustration for &quot;{feature.title}&quot;</p>
                 </div>
               </div>
             </motion.div>
