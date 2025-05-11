@@ -1,0 +1,224 @@
+{
+  "common": {
+    "title": "DevTrail✨ - Portfolio chuyên nghiệp cho dân IT",
+    "description": "Tạo và quản lý CV, portfolio cá nhân chỉ trong vài phút",
+    "keywords": "portfolio, cv, resume, it, developer, coder, programmer",
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "success": "Thành công",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "confirm": "Xác nhận",
+    "back": "Quay lại"
+  },
+  "header": {
+    "home": "Trang chủ",
+    "cv": "Quản lý CV",
+    "portfolio": "Portfolio",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
+  },
+  "footer": {
+    "rights": "Tất cả quyền được bảo lưu",
+    "powered": "Được phát triển bởi",
+    "features": "Tính năng",
+    "pricing": "Bảng giá",
+    "contact": "Liên hệ",
+    "about": "Về chúng tôi",
+    "terms": "Điều khoản dịch vụ",
+    "privacy": "Chính sách bảo mật"
+  },
+  "home": {
+    "hero": {
+      "title": "Tạo Portfolio chuyên nghiệp của bạn",
+      "subtitle": "Trưng bày kỹ năng, dự án và kinh nghiệm của bạn với một portfolio đẹp mắt",
+      "cta": "Bắt đầu ngay",
+      "users": "Được tin tưởng bởi hơn 1.000 người dùng ✨",
+      "stats": {
+        "users": "Người dùng",
+        "cvs": "CV đã tạo",
+        "companies": "Công ty đối tác"
+      }
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "subtitle": "Tính năng nâng cao dành cho người dùng muốn bứt phá và tối ưu hóa sự hiện diện chuyên nghiệp.",
+      "items": {
+        "cv": {
+          "title": "Nhập CV cũ từ file PDF hoặc Word",
+          "description": "THệ thống tự động trích xuất thông tin — bạn chỉ cần xác nhận và chỉnh sửa."
+        },
+        "portfolio": {
+          "title": "Chọn giao diện Portfolio cá nhân",
+          "description": "Nhiều mẫu hiện đại, đẹp mắt – phù hợp cho cả lập trình viên frontend và backend."
+        },
+        "share": {
+          "title": "Tạo link chia sẻ portfolio công khai",
+          "description": "Ví dụ: devtrail.dev/user/jackie – dễ dàng chia sẻ qua email hoặc LinkedIn."
+        },
+        "analytics": {
+          "title": "Tích hợp phân tích cho Portfolio (tùy chọn)",
+          "description": "Xem ai đã ghé thăm, số lượt nhấp vào GitHub, LinkedIn, v.v."
+        }
+      },
+      "list": [
+        {
+          "title": "Mẫu CV chuyên biệt cho dân IT",
+          "description": "Tối ưu nội dung, bố cục theo chuẩn tuyển dụng ngành Công nghệ Thông tin."
+        },
+        {
+          "title": "Chỉnh sửa CV dễ dàng, preview theo thời gian thực",
+          "description": "Thêm/sửa thông tin nhanh chóng, xem trước kết quả tức thì."
+        },
+        {
+          "title": "Portfolio cá nhân tự động từ CV",
+          "description": "Không cần code – hệ thống tự dựng portfolio từ CV của bạn."
+        },
+        {
+          "title": "Xuất file PDF sắc nét, định dạng đúng chuẩn",
+          "description": "Dùng khi ứng tuyển, chia sẻ hoặc in ấn dễ dàng."
+        },
+        {
+          "title": "Lưu nhiều CV, dễ dàng quản lý và chỉnh sửa",
+          "description": "Tùy biến theo từng vị trí ứng tuyển khác nhau."
+        },
+        {
+          "title": "Hỗ trợ nhiều người dùng cùng lúc",
+          "description": "Một tài khoản có thể quản lý nhiều CV và portfolio khác nhau."
+        }
+      ]
+    },
+    "advanced": {
+      "title": "Tính năng nâng cao",
+      "subtitle": "Nâng tầm portfolio của bạn",
+      "import": {
+        "title": "Nhập từ PDF/Word",
+        "description": "Hệ thống tự động trích xuất thông tin — bạn chỉ cần xác nhận và chỉnh sửa"
+      },
+      "customize": {
+        "title": "Tùy chỉnh giao diện Portfolio",
+        "description": "Nhiều mẫu hiện đại, đẹp mắt – phù hợp cho cả lập trình viên frontend và backend"
+      },
+      "share": {
+        "title": "Tạo link chia sẻ công khai",
+        "description": "Ví dụ: cvplatform.com/user/nguyenvana – dễ dàng chia sẻ qua email hoặc LinkedIn"
+      },
+      "analytics": {
+        "title": "Phân tích Portfolio",
+        "description": "Xem ai đã ghé thăm, số lượt nhấp vào GitHub, LinkedIn, v.v."
+      }
+    },
+    "why": {
+      "title": "Tại sao chọn chúng tôi",
+      "subtitle": "Thiết kế phù hợp với nhu cầu năng suất hiện đại của bạn",
+      "tech": {
+        "title": "Tối ưu cho công nghệ",
+        "subtitle": "Dành cho dân IT",
+        "points": [
+          "Hỗ trợ dự án, tech stack, GitHub – không giới hạn",
+          "Bố cục phù hợp với ngành công nghệ",
+          "Ngôn ngữ & định dạng sát với nhu cầu thực tế ngành IT"
+        ]
+      },
+      "hiring": {
+        "title": "Chuẩn tuyển dụng công nghệ",
+        "subtitle": "Gây ấn tượng với nhà tuyển dụng IT từ cái nhìn đầu tiên",
+        "points": [
+          "Tối ưu ATS, dễ dàng quét nội dung",
+          "Hiển thị rõ ràng kỹ năng & kinh nghiệm",
+          "Giao diện logic, dễ đọc, dễ theo dõi"
+        ]
+      },
+      "performance": {
+        "title": "Thân thiện & hiệu năng cao",
+        "subtitle": "Mượt mà trên mọi thiết bị",
+        "points": [
+          "Kéo thả trực quan, không cần code",
+          "Xây dựng bằng Next.js, Tailwind – nhanh, responsive",
+          "Bảo mật dữ liệu, hỗ trợ đăng nhập GitHub"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Chọn gói phù hợp với bạn",
+      "subtitle": "Các lựa chọn linh hoạt phù hợp với cá nhân và nhóm mọi kích cỡ",
+      "free": {
+        "name": "Miễn phí",
+        "price": "0",
+        "description": "Hoàn hảo cho việc bắt đầu",
+        "features": [
+          "Quản lý tác vụ cơ bản",
+          "Phiên tập trung hàng ngày",
+          "Phân tích cơ bản",
+          "3 Dự án",
+          "Truy cập ứng dụng di động"
+        ]
+      },
+      "pro": {
+        "name": "Chuyên nghiệp",
+        "price": "9.99",
+        "description": "Dành cho năng suất cao",
+        "features": [
+          "Tất cả trong gói Miễn phí",
+          "Dự án không giới hạn",
+          "Phân tích nâng cao",
+          "Thiết lập và theo dõi mục tiêu",
+          "Hỗ trợ ưu tiên",
+          "Hợp tác nhóm (tối đa 3 người)"
+        ]
+      },
+      "team": {
+        "name": "Doanh nghiệp",
+        "price": "29.99",
+        "description": "Dành cho các nhóm và tổ chức",
+        "features": [
+          "Tất cả trong gói Chuyên nghiệp",
+          "Thành viên nhóm không giới hạn",
+          "Quyền hạn nâng cao",
+          "Bảng điều khiển Admin",
+          "Truy cập API",
+          "Hỗ trợ đặc biệt",
+          "Tích hợp tùy chỉnh"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Sẵn sàng tạo CV chuyên nghiệp?",
+      "subtitle": "Bắt đầu miễn phí ngay hôm nay và xây dựng portfolio cá nhân ấn tượng",
+      "primary": "Đăng ký miễn phí",
+      "secondary": "Xem mẫu CV"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Chào mừng trở lại",
+      "subtitle": "Đăng nhập vào tài khoản của bạn",
+      "email": "Email",
+      "password": "Mật khẩu",
+      "remember": "Ghi nhớ đăng nhập",
+      "forgot": "Quên mật khẩu?",
+      "submit": "Đăng nhập",
+      "or": "Hoặc tiếp tục với",
+      "noAccount": "Chưa có tài khoản?",
+      "register": "Đăng ký"
+    },
+    "register": {
+      "title": "Tạo tài khoản",
+      "subtitle": "Tham gia cùng hàng nghìn chuyên gia IT",
+      "name": "Họ và tên",
+      "email": "Email",
+      "password": "Mật khẩu",
+      "confirm": "Xác nhận mật khẩu",
+      "terms": "Tôi đồng ý với điều khoản và điều kiện",
+      "submit": "Tạo tài khoản",
+      "or": "Hoặc tiếp tục với",
+      "hasAccount": "Đã có tài khoản?",
+      "login": "Đăng nhập"
+    }
+  }
+} 

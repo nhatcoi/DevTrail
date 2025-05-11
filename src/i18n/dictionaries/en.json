@@ -1,0 +1,224 @@
+{
+  "common": {
+    "title": "DevTrail✨ - Professional Portfolio for IT Professionals",
+    "description": "Create and manage CV, personal portfolio in just minutes",
+    "keywords": "portfolio, cv, resume, it, developer, coder, programmer",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back"
+  },
+  "header": {
+    "home": "Home",
+    "cv": "Manage CV",
+    "portfolio": "Portfolio",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "powered": "Powered by",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "about": "About Us",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+  "home": {
+    "hero": {
+      "title": "Create Your Professional Portfolio",
+      "subtitle": "Showcase your skills, projects, and experience with a beautiful portfolio",
+      "cta": "Get Started",
+      "users": "Trusted by over 1,000 users ✨",
+      "stats": {
+        "users": "Active Users",
+        "cvs": "CVs Created",
+        "companies": "Partner Companies"
+      }
+    },
+    "features": {
+      "title": "Key Features",
+      "subtitle": "Advanced tools for users who want to stand out and optimize their professional presence.",
+      "items": {
+        "cv": {
+          "title": "Import existing CV from PDF or Word file",
+          "description": "The system automatically extracts the information — you just need to review and edit."
+        },
+        "portfolio": {
+          "title": "Choose a personal Portfolio layout",
+          "description": "A variety of modern, eye-catching templates — suitable for both frontend and backend developers."
+        },
+        "share": {
+          "title": "Generate a public portfolio sharing link",
+          "description": "Example: devtrail.dev/user/jackie — easy to share via email or LinkedIn."
+        },
+        "analytics": {
+          "title": "Portfolio analytics integration (optional)",
+          "description": "See who visited, how many clicks on GitHub, LinkedIn, etc."
+        }
+      },
+      "list": [
+        {
+          "title": "IT-specific CV templates",
+          "description": "Optimized content and layout according to IT industry hiring standards."
+        },
+        {
+          "title": "Easy CV editing with real-time preview",
+          "description": "Add/edit information quickly, see the results instantly."
+        },
+        {
+          "title": "Automatic personal portfolio from CV",
+          "description": "No coding required - the system automatically builds a portfolio from your CV."
+        },
+        {
+          "title": "Export sharp PDF files with standard formatting",
+          "description": "Use when applying, sharing or printing easily."
+        },
+        {
+          "title": "Save multiple CVs, easy to manage and edit",
+          "description": "Customize according to different job positions."
+        },
+        {
+          "title": "Support for multiple users at the same time",
+          "description": "One account can manage multiple CVs and portfolios."
+        }
+      ]
+    },
+    "advanced": {
+      "title": "Advanced Features",
+      "subtitle": "Take your portfolio to the next level",
+      "import": {
+        "title": "Import from PDF/Word",
+        "description": "System automatically extracts information - you just need to verify and edit"
+      },
+      "customize": {
+        "title": "Customize Portfolio Design",
+        "description": "Modern, beautiful templates - suitable for both frontend and backend developers"
+      },
+      "share": {
+        "title": "Create Public Share Link",
+        "description": "Example: cvplatform.com/user/johndoe - easy to share via email or LinkedIn"
+      },
+      "analytics": {
+        "title": "Portfolio Analytics",
+        "description": "See who visited, number of clicks to GitHub, LinkedIn, etc."
+      }
+    },
+    "why": {
+      "title": "Why Choose Us",
+      "subtitle": "Designed to meet your modern productivity needs",
+      "tech": {
+        "title": "Optimized for Tech",
+        "subtitle": "Made for IT professionals",
+        "points": [
+          "Support for projects, tech stack, GitHub - unlimited",
+          "Layout suitable for tech industry",
+          "Language & format matching IT industry needs"
+        ]
+      },
+      "hiring": {
+        "title": "Tech Recruitment Standard",
+        "subtitle": "Impress IT recruiters at first glance",
+        "points": [
+          "ATS optimized, easy to scan content",
+          "Clear display of skills & experience",
+          "Logical, easy to read, easy to follow interface"
+        ]
+      },
+      "performance": {
+        "title": "User-friendly & High Performance",
+        "subtitle": "Smooth on all devices",
+        "points": [
+          "Intuitive drag & drop, no coding needed",
+          "Built with Next.js, Tailwind - fast, responsive",
+          "Data security, GitHub login support"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Choose Your Plan",
+      "subtitle": "Flexible options for individuals and teams of all sizes",
+      "free": {
+        "name": "Free",
+        "price": "0",
+        "description": "Perfect for getting started",
+        "features": [
+          "Basic task management",
+          "Daily focus sessions",
+          "Basic analytics",
+          "3 Projects",
+          "Mobile app access"
+        ]
+      },
+      "pro": {
+        "name": "Professional",
+        "price": "9.99",
+        "description": "For high productivity",
+        "features": [
+          "Everything in Free",
+          "Unlimited projects",
+          "Advanced analytics",
+          "Goal setting and tracking",
+          "Priority support",
+          "Team collaboration (up to 3)"
+        ]
+      },
+      "team": {
+        "name": "Enterprise",
+        "price": "29.99",
+        "description": "For teams and organizations",
+        "features": [
+          "Everything in Professional",
+          "Unlimited team members",
+          "Advanced permissions",
+          "Admin dashboard",
+          "API access",
+          "Dedicated support",
+          "Custom integrations"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to create your professional CV?",
+      "subtitle": "Start free today and build an impressive personal portfolio",
+      "primary": "Sign up free",
+      "secondary": "View CV templates"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "remember": "Remember me",
+      "forgot": "Forgot password?",
+      "submit": "Sign in",
+      "or": "Or continue with",
+      "noAccount": "Don't have an account?",
+      "register": "Register"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join thousands of IT professionals",
+      "name": "Full name",
+      "email": "Email",
+      "password": "Password",
+      "confirm": "Confirm password",
+      "terms": "I agree to the terms and conditions",
+      "submit": "Create account",
+      "or": "Or continue with",
+      "hasAccount": "Already have an account?",
+      "login": "Login"
+    }
+  }
+} 
