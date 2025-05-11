@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n';
 
 export default function HeroSection() {
   const { dictionary } = useLanguage();

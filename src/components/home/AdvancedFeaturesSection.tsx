@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FileUp, Palette, Link as LinkIcon, BarChart } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n';
 
 
 
