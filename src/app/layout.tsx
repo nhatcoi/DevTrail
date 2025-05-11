@@ -1,47 +1,42 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { i18n } from "@/i18n/i18n-config";
+import { getDictionary } from "@/i18n/dictionaries";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { LanguageProvider } from "@/i18n/LanguageContext";
-import { getDictionary } from "@/i18n/dictionaries";
-import { i18n } from "@/i18n/i18n-config";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const dictionary = await getDictionary(i18n.defaultLocale);
+  
+  return {
+    title: dictionary.common.title,
+    description: dictionary.common.description,
+    keywords: dictionary.common.keywords,
+  };
+}
 
-// Get default dictionary
-const defaultDictionary = getDictionary(i18n.defaultLocale);
-
-export const metadata: Metadata = {
-  title: defaultDictionary.common.title,
-  description: defaultDictionary.common.description,
-  keywords: defaultDictionary.common.keywords,
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const dictionary = await getDictionary(i18n.defaultLocale);
+
   return (
-    <html lang={i18n.defaultLocale} suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100`}
-      >
-        <LanguageProvider>
-          <Header />
-          <main className="min-h-screen pt-16">
-            {children}
-          </main>
-          <Footer />
+    <html lang={i18n.defaultLocale}>
+      <body className={`${inter.className} antialiased bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100`}>
+        <LanguageProvider defaultDictionary={dictionary}>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow pt-16">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </LanguageProvider>
       </body>
     </html>
