@@ -2,36 +2,40 @@
 
 import { motion } from 'framer-motion';
 import { FileUp, Palette, Link as LinkIcon, BarChart } from 'lucide-react';
-import Image from 'next/image';
+import { useLanguage } from '@/i18n/LanguageContext';
 
-const advancedFeatures = [
-  {
-    title: 'Nhập CV cũ từ file PDF hoặc Word',
-    description: 'Hệ thống tự động trích xuất thông tin — bạn chỉ cần xác nhận và chỉnh sửa.',
-    icon: <FileUp className="h-12 w-12 text-blue-600" />,
-    imageUrl: '/images/feature-import.png'
-  },
-  {
-    title: 'Chọn giao diện Portfolio cá nhân',
-    description: 'Nhiều mẫu hiện đại, đẹp mắt – phù hợp cho cả lập trình viên frontend và backend.',
-    icon: <Palette className="h-12 w-12 text-blue-600" />,
-    imageUrl: '/images/feature-portfolio.png'
-  },
-  {
-    title: 'Tạo link chia sẻ portfolio công khai',
-    description: 'Ví dụ: cvplatform.com/user/nguyenvana – dễ dàng chia sẻ qua email hoặc LinkedIn.',
-    icon: <LinkIcon className="h-12 w-12 text-blue-600" />,
-    imageUrl: '/images/feature-share.png'
-  },
-  {
-    title: 'Tích hợp phân tích cho Portfolio (tùy chọn)',
-    description: 'Xem ai đã ghé thăm, số lượt nhấp vào GitHub, LinkedIn, v.v.',
-    icon: <BarChart className="h-12 w-12 text-blue-600" />,
-    imageUrl: '/images/feature-analytics.png'
-  }
-];
+
 
 export default function AdvancedFeaturesSection() {
+  const { dictionary } = useLanguage();
+
+  const advancedFeatures = [
+    {
+      title: dictionary.home.features.items.cv.title,
+      description: dictionary.home.features.items.cv.description,
+      icon: <FileUp className="h-12 w-12 text-blue-600" />,
+      imageUrl: '/images/feature-import.png'
+    },
+    {
+      title: dictionary.home.features.items.portfolio.title,
+      description: dictionary.home.features.items.portfolio.description,
+      icon: <Palette className="h-12 w-12 text-blue-600" />,
+      imageUrl: '/images/feature-portfolio.png'
+    },
+    {
+      title: dictionary.home.features.items.share.title,
+      description: dictionary.home.features.items.share.description,
+      icon: <LinkIcon className="h-12 w-12 text-blue-600" />,
+      imageUrl: '/images/feature-share.png'
+    },
+    {
+      title: dictionary.home.features.items.analytics.title,
+      description: dictionary.home.features.items.analytics.description,
+      icon: <BarChart className="h-12 w-12 text-blue-600" />,
+      imageUrl: '/images/feature-analytics.png'
+    }
+  ];
+
   return (
     <section className="py-20 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,9 +46,9 @@ export default function AdvancedFeaturesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Advanced Features 🚀</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{dictionary.home.features.title}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Tính năng nâng cao dành cho người dùng muốn bứt phá và tối ưu hóa sự hiện diện chuyên nghiệp.
+            {dictionary.home.features.subtitle}
           </p>
         </motion.div>
 
@@ -73,7 +77,7 @@ export default function AdvancedFeaturesSection() {
               <div className="lg:w-1/2 h-[300px] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
                 {/* Placeholder for feature image */}
                 <div className="text-gray-400 text-center p-8">
-                  <p>Hình ảnh minh họa cho tính năng "{feature.title}"</p>
+                  <p>Illustration for "{feature.title}"</p>
                 </div>
               </div>
             </motion.div>

@@ -2,41 +2,46 @@
 
 import { motion } from 'framer-motion';
 import { Code, CheckSquare, Zap } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
-const reasons = [
-  {
-    title: 'Tối ưu cho công nghệ',
-    subtitle: 'Dành cho dân IT',
-    description: [
-      '🎨 Hỗ trợ dự án, tech stack, GitHub – không giới hạn',
-      '💻 Bố cục phù hợp với ngành công nghệ',
-      '📚 Ngôn ngữ & định dạng sát với nhu cầu thực tế ngành IT'
-    ],
-    icon: <Code className="h-12 w-12 text-blue-600" />
-  },
-  {
-    title: 'Chuẩn tuyển dụng công nghệ',
-    subtitle: 'Gây ấn tượng với nhà tuyển dụng IT từ cái nhìn đầu tiên',
-    description: [
-      '📝 Tối ưu ATS, dễ dàng quét nội dung',
-      '💼 Hiển thị rõ ràng kỹ năng & kinh nghiệm',
-      '📊 Giao diện logic, dễ đọc, dễ theo dõi'
-    ],
-    icon: <CheckSquare className="h-12 w-12 text-blue-600" />
-  },
-  {
-    title: 'Thân thiện & hiệu năng cao',
-    subtitle: 'Dễ dùng, mượt mà trên mọi thiết bị',
-    description: [
-      '🎨 Kéo thả trực quan, không cần code',
-      '⚡ Xây dựng bằng Next.js, Tailwind – nhanh, responsive',
-      '🔒 Bảo mật dữ liệu, hỗ trợ đăng nhập GitHub'
-    ],
-    icon: <Zap className="h-12 w-12 text-blue-600" />
-  }
-];
+
 
 export default function WhyChooseUsSection() {
+  const { dictionary } = useLanguage();
+  const reasons = [
+    {
+      title: dictionary.home.why.tech.title,
+      subtitle: 'Dành cho dân IT',
+      description: [
+        '🎨 Hỗ trợ dự án, tech stack, GitHub – không giới hạn',
+        '💻 Bố cục phù hợp với ngành công nghệ',
+        '📚 Ngôn ngữ & định dạng sát với nhu cầu thực tế ngành IT'
+      ],
+      icon: <Code className="h-12 w-12 text-blue-600" />
+    },
+    {
+      title: 'Chuẩn tuyển dụng công nghệ',
+      subtitle: 'Gây ấn tượng với nhà tuyển dụng IT từ cái nhìn đầu tiên',
+      description: [
+        '📝 Tối ưu ATS, dễ dàng quét nội dung',
+        '💼 Hiển thị rõ ràng kỹ năng & kinh nghiệm',
+        '📊 Giao diện logic, dễ đọc, dễ theo dõi'
+      ],
+      icon: <CheckSquare className="h-12 w-12 text-blue-600" />
+    },
+    {
+      title: 'Thân thiện & hiệu năng cao',
+      subtitle: 'Dễ dùng, mượt mà trên mọi thiết bị',
+      description: [
+        '🎨 Kéo thả trực quan, không cần code',
+        '⚡ Xây dựng bằng Next.js, Tailwind – nhanh, responsive',
+        '🔒 Bảo mật dữ liệu, hỗ trợ đăng nhập GitHub'
+      ],
+      icon: <Zap className="h-12 w-12 text-blue-600" />
+    }
+  ];
+
+
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

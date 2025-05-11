@@ -3,9 +3,12 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { dictionary } = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
@@ -24,19 +27,20 @@ export default function Header() {
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
               <Link href="/" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800">
-                Trang chủ
+                {dictionary.header.home}
               </Link>
               <Link href="/cv" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800">
-                Quản lý CV
+                {dictionary.header.cv}
               </Link>
               <Link href="/portfolio" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800">
-                Portfolio
+                {dictionary.header.portfolio}
               </Link>
+              <LanguageSwitcher />
               <Link 
                 href="/auth/login" 
                 className="ml-4 px-4 py-2 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
               >
-                Đăng nhập
+                {dictionary.header.login}
               </Link>
             </div>
           </div>
@@ -62,28 +66,31 @@ export default function Header() {
               className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
-              Trang chủ
+              {dictionary.header.home}
             </Link>
             <Link 
               href="/cv" 
               className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
-              Quản lý CV
+              {dictionary.header.cv}
             </Link>
             <Link 
               href="/portfolio" 
               className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
-              Portfolio
+              {dictionary.header.portfolio}
             </Link>
+            <div className="block px-3 py-2">
+              <LanguageSwitcher />
+            </div>
             <Link 
               href="/auth/login" 
               className="block mt-4 px-4 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Đăng nhập
+              {dictionary.header.login}
             </Link>
           </div>
         </div>

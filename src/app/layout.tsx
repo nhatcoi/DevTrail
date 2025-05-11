@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { LanguageProvider } from "@/i18n/LanguageContext";
+import { getDictionary } from "@/i18n/dictionaries";
+import { i18n } from "@/i18n/i18n-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,10 +17,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Get default dictionary
+const defaultDictionary = getDictionary(i18n.defaultLocale);
+
 export const metadata: Metadata = {
-  title: "DevTrail✨ - Portfolio chuyên nghiệp cho dân IT",
-  description: "Tạo và quản lý CV, portfolio cá nhân chỉ trong vài phút",
-  keywords: "portfolio, cv, resume, it, developer, coder, programmer",
+  title: defaultDictionary.common.title,
+  description: defaultDictionary.common.description,
+  keywords: defaultDictionary.common.keywords,
 };
 
 export default function RootLayout({
@@ -26,15 +32,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" suppressHydrationWarning>
+    <html lang={i18n.defaultLocale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100`}
       >
-        <Header />
-        <main className="min-h-screen pt-16">
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          <main className="min-h-screen pt-16">
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,6 +1,12 @@
+'use client';
+
 import Link from 'next/link';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function Footer() {
+  const { dictionary } = useLanguage();
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-gray-50 dark:bg-gray-900 py-12 border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,32 +19,32 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-gray-600 dark:text-gray-400 text-sm max-w-sm">
-              Nền tảng tạo và quản lý CV, portfolio chuyên nghiệp dành cho dân IT. Được phát triển với Next.js và Tailwind CSS.
+              {dictionary.common.description}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider">Tính năng</h3>
+            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider">{dictionary.footer.features}</h3>
             <ul className="mt-4 space-y-3">
               <li>
                 <Link href="/cv" className="text-gray-600 dark:text-gray-400 text-sm hover:text-blue-600 dark:hover:text-blue-400">
-                  Quản lý CV
+                  {dictionary.header.cv}
                 </Link>
               </li>
               <li>
                 <Link href="/portfolio" className="text-gray-600 dark:text-gray-400 text-sm hover:text-blue-600 dark:hover:text-blue-400">
-                  Tạo Portfolio
+                  {dictionary.header.portfolio}
                 </Link>
               </li>
               <li>
                 <Link href="/pricing" className="text-gray-600 dark:text-gray-400 text-sm hover:text-blue-600 dark:hover:text-blue-400">
-                  Bảng giá
+                  {dictionary.footer.pricing}
                 </Link>
               </li>
               <li>
                 <Link href="/features" className="text-gray-600 dark:text-gray-400 text-sm hover:text-blue-600 dark:hover:text-blue-400">
-                  Tính năng
+                  {dictionary.footer.features}
                 </Link>
               </li>
             </ul>
@@ -46,7 +52,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider">Liên hệ</h3>
+            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider">{dictionary.footer.contact}</h3>
             <ul className="mt-4 space-y-3">
               <li>
                 <a href="mailto:support@devtrail.website" className="text-gray-600 dark:text-gray-400 text-sm hover:text-blue-600 dark:hover:text-blue-400">
@@ -69,7 +75,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} DevTrail. Tất cả các quyền được bảo lưu.
+            &copy; {currentYear} DevTrail. {dictionary.footer.rights}.
           </p>
         </div>
       </div>
