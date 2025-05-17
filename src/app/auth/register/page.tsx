@@ -6,6 +6,7 @@ import { Github } from 'lucide-react';
 import { useAuth } from '@/lib/firebase/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { FirebaseError } from 'firebase/app';
 
 export default function RegisterPage() {
   const [name, setName] = useState('');
@@ -30,9 +31,13 @@ export default function RegisterPage() {
       await updateUserProfile(name);
       // Chuyển hướng đến dashboard
       router.push('/dashboard');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Register error:', error);
-      setError(error.message || 'Đã xảy ra lỗi khi đăng ký');
+      if (error instanceof FirebaseError) {
+        setError(error.message);
+      } else {
+        setError('Đã xảy ra lỗi khi đăng ký');
+      }
     } finally {
       setLoading(false);
     }
@@ -45,9 +50,13 @@ export default function RegisterPage() {
     try {
       await signInWithGoogle();
       router.push('/dashboard');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Google login error:', error);
-      setError(error.message || 'Đã xảy ra lỗi khi đăng nhập với Google');
+      if (error instanceof FirebaseError) {
+        setError(error.message);
+      } else {
+        setError('Đã xảy ra lỗi khi đăng nhập với Google');
+      }
     } finally {
       setLoading(false);
     }
@@ -60,9 +69,13 @@ export default function RegisterPage() {
     try {
       await signInWithGithub();
       router.push('/dashboard');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Github login error:', error);
-      setError(error.message || 'Đã xảy ra lỗi khi đăng nhập với GitHub');
+      if (error instanceof FirebaseError) {
+        setError(error.message);
+      } else {
+        setError('Đã xảy ra lỗi khi đăng nhập với GitHub');
+      }
     } finally {
       setLoading(false);
     }

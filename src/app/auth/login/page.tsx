@@ -7,6 +7,7 @@ import { Github } from 'lucide-react';
 import { useAuth } from '@/lib/firebase/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { FirebaseError } from 'firebase/app';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -26,9 +27,13 @@ export default function LoginPage() {
     try {
       await signIn(email, password);
       router.push('/dashboard');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Login error:', error);
-      setError(error.message || 'Đã xảy ra lỗi khi đăng nhập');
+      if (error instanceof FirebaseError) {
+        setError(error.message);
+      } else {
+        setError('Error logging in');
+      }
     } finally {
       setLoading(false);
     }
@@ -41,9 +46,13 @@ export default function LoginPage() {
     try {
       await signInWithGoogle();
       router.push('/dashboard');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Google login error:', error);
-      setError(error.message || 'Đã xảy ra lỗi khi đăng nhập với Google');
+      if (error instanceof FirebaseError) {
+        setError(error.message);
+      } else {
+        setError('Error logging in with Google');
+      }
     } finally {
       setLoading(false);
     }
@@ -56,9 +65,13 @@ export default function LoginPage() {
     try {
       await signInWithGithub();
       router.push('/dashboard');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Github login error:', error);
-      setError(error.message || 'Đã xảy ra lỗi khi đăng nhập với GitHub');
+      if (error instanceof FirebaseError) {
+        setError(error.message);
+      } else {
+        setError('Error logging in with GitHub');
+      }
     } finally {
       setLoading(false);
     }
