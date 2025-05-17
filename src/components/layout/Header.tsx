@@ -2,13 +2,25 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User, LogOut } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { useAuth } from '@/lib/firebase/AuthContext';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const { dictionary } = useLanguage();
+  const { user, logout } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      setIsProfileMenuOpen(false);
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
 
   return (
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
@@ -36,12 +48,49 @@ export default function Header() {
                   {dictionary.header.portfolio}
                 </Link>
                 <LanguageSwitcher />
-                <Link
+                
+                {user ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}
+                      className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+                    >
+                      <img
+                        src={user.photoURL || 'https://via.placeholder.com/32'}
+                        alt={user.displayName || 'User'}
+                        className="w-8 h-8 rounded-full"
+                      />
+                      <span>{user.displayName || dictionary.header.profile}</span>
+                    </button>
+                    
+                    {isProfileMenuOpen && (
+                      <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-10 border border-gray-200 dark:border-gray-700">
+                        <Link
+                          href="/dashboard"
+                          className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                          onClick={() => setIsProfileMenuOpen(false)}
+                        >
+                          <User size={16} className="mr-2" />
+                          {dictionary.header.profile}
+                        </Link>
+                        <button
+                          onClick={handleLogout}
+                          className="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        >
+                          <LogOut size={16} className="mr-2" />
+                          {dictionary.header.logout}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
                     href="/auth/login"
                     className="ml-4 px-4 py-2 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors min-w-[100px] text-center"
-                >
-                  {dictionary.header.login}
-                </Link>
+                  >
+                    {dictionary.header.login}
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -85,13 +134,35 @@ export default function Header() {
                 <div className="block px-3 py-2">
                   <LanguageSwitcher />
                 </div>
-                <Link
+                
+                {user ? (
+                  <>
+                    <Link
+                      href="/dashboard"
+                      className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {dictionary.header.profile}
+                    </Link>
+                    <button
+                      onClick={() => {
+                        handleLogout();
+                        setIsMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+                    >
+                      {dictionary.header.logout}
+                    </button>
+                  </>
+                ) : (
+                  <Link
                     href="/auth/login"
                     className="block mt-4 px-4 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
-                >
-                  {dictionary.header.login}
-                </Link>
+                  >
+                    {dictionary.header.login}
+                  </Link>
+                )}
               </div>
             </div>
         )}
