@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevTrail 🌱
 
-## Getting Started
+## About
+DevTrail is a Next.js application designed to help developers track their learning journey and showcase their progress. It provides a platform for developers to document their skills, projects, and growth over time.
 
-First, run the development server:
+## Prerequisites
+- Node.js 18.x or later
+- npm or yarn package manager
+- Basic knowledge of React and Next.js
+
+## Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/DevTrail.git
+cd DevTrail
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start the development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+1. Sign up or log in to your account
+2. Create your developer profile
+3. Add skills, projects, and learning milestones
+4. Share your profile with others
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
+- Personalized developer portfolios
+- Skill tracking and visualization
+- Project showcase
+- Learning path documentation
+- Authentication with Next-Auth
 
-## Learn More
+## Tech Stack
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React 19](https://react.dev/) - UI library
+- [Tailwind CSS 4](https://tailwindcss.com/) - CSS framework
+- [Firebase](https://firebase.google.com/) - Backend services
+- [Next-Auth](https://next-auth.js.org/) - Authentication
+- [Framer Motion](https://www.framer.com/motion/) - Animations
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
+We welcome contributions to DevTrail! Please follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributors
+- [Your Name](https://github.com/yourusername) - Initial work
 
-## Deploy on Vercel
+## Resources
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
+- Email: your.email@example.com
+- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- GitHub: [yourusername](https://github.com/yourusername)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+<p align="center">
+  <img src="https://via.placeholder.com/150" alt="DevTrail Logo" width="150" height="150">
+</p>
+
+![GitHub stars](https://img.shields.io/github/stars/yourusername/DevTrail?style=social)
+![GitHub forks](https://img.shields.io/github/forks/yourusername/DevTrail?style=social)
+![GitHub issues](https://img.shields.io/github/issues/yourusername/DevTrail)
+![GitHub license](https://img.shields.io/github/license/yourusername/DevTrail)
