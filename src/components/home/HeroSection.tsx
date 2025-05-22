@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -55,10 +56,13 @@ export default function HeroSection() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg opacity-20 blur-xl" />
             <div className="relative h-full rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-xl">
-              {/* Placeholder for screenshot */}
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">
-                <p className="text-center">Preview của CV</p>
-              </div>
+              <Image
+                src="/hero.png"
+                alt="DevTrail Preview"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </motion.div>
         </div>
